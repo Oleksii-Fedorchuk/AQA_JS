@@ -3,7 +3,7 @@
 // Напишіть блок коду, який класифікує оцінку: "відмінно" для оцінок від 90 до 100, "добре" для оцінок від 70 до 89,
 // "задовільно" для оцінок від 50 до 69, та "незадовільно" для оцінок менше 50.
 function markChecker(mark) {
-    if (!isNaN(mark) && mark <= 100 && mark >=0) {
+    if (!isNaN(mark) && mark <= 100 && mark >= 0) {
         if (mark >= 90 && mark <= 100) {
             console.log("Твоя оцінка: Відмінно!")
         } else if (mark >= 70 && mark <= 89) {
@@ -26,27 +26,32 @@ markChecker(1);
 // Завдання: У вас є рядок з дією ("додати", "відняти", "помножити", "поділити") і два числа.
 // Напишіть блок коду, який виконує обрану дію з цими числами та виводить результат.
 
-let first_number = 1;
-let second_number = 2;
-let action;
 
-let result = first_number / second_number
+const first_number = 1;
+const second_number = 2;
 
-switch (result) {
-    case first_number + second_number:
-        action = "Дія додавання";
+const addition = first_number + second_number
+const subtraction = first_number - second_number
+const division = first_number / second_number
+const multiplication = first_number * second_number
+
+let action = multiplication;
+
+switch (action) {
+    case addition:
+        action = addition;
         break;
-    case first_number - second_number:
-        action = "Дія віднімання";
+    case subtraction:
+        action = subtraction;
         break;
-    case first_number * second_number:
-        action = "Дія множення";
+    case division:
+        action = division;
         break;
-    case first_number / second_number:
-        action = "Дія ділення"
+    case multiplication:
+        action = multiplication
         break;
     default:
-        action = "Дію не визначено!"
+        action = "Something went wrong"
 }
 console.log(action)
 
